@@ -5,7 +5,9 @@ import photo from './Mingling.jpg'
 
 
 const Login = (props) => {
+
         const { userName, password } = props
+
         const onSubmit = evt => {
             evt.preventDefault()
             onSubmit()

@@ -3,6 +3,7 @@ import './App.css'
 import Home from './Components/Home'
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import Login from './Components/Login'
+import AccountCreation from './Components/AccountCreation'
 
 function App() {
 
@@ -13,6 +14,9 @@ function App() {
       <Switch>
         <Route id = 'login' path="/login">
           <Login />
+        </Route>
+        <Route id = 'create-account' path="/create-account">
+          <AccountCreation />
         </Route>
         <Route id = 'home' path="/">
           <Home />
