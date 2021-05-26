@@ -41,7 +41,8 @@ color: white;
 background: black;
 flex-direction: row;
 justify-content: space-between;
-align-items: center;
+align-items: start;
+padding: 5%;
 height: 100vh;
 `
 

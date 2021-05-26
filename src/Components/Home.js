@@ -25,7 +25,7 @@ const HomeDiv = styled.div`
 background: black;
 color: white;
 display: flex;
-justify-content: center;
+justify-content: start;
 align-items: center;
 flex-direction: column;
 width: 100%;

@@ -4,6 +4,7 @@ import Home from './Components/Home'
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import Login from './Components/Login'
 import AccountCreation from './Components/AccountCreation'
+import Nav from './Components/Nav'
 
 function App() {
 
@@ -13,12 +14,15 @@ function App() {
     <BrowserRouter>
       <Switch>
         <Route id = 'login' path="/login">
+          <Nav />
           <Login />
         </Route>
         <Route id = 'create-account' path="/create-account">
+          <Nav />
           <AccountCreation />
         </Route>
         <Route id = 'home' path="/">
+          <Nav />
           <Home />
         </Route>
       </Switch>
