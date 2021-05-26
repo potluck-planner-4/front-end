@@ -39,8 +39,8 @@ height: 65vh;
 const ButtonDiv = styled.div`
 display: flex;
 flex-direction: row;
-justify-content: space-between;
-width: 10%
+justify-content: space-around;
+width: 20%;
 `
 
 const Button = styled.button`

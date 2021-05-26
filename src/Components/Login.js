@@ -1,16 +1,22 @@
 import React from 'react'
 import styled from 'styled-components'
 import photo from './Mingling.jpg'
+import { Link } from 'react-router-dom'
 
 
 
 const Login = (props) => {
 
-        const { userName, password } = props
+        const { userName, password, submit, change } = props
 
         const onSubmit = evt => {
             evt.preventDefault()
-            onSubmit()
+            submit()
+        }
+
+        const onChange = evt => {
+            const { userName , password } = evt.target
+            change( userName, password )
         }
 
     return (
@@ -22,13 +28,15 @@ const Login = (props) => {
                 <form id = "login-form" onSubmit = {onSubmit}>
                     <label>
                         <h3>Username: </h3>
-                        <input id = "userName" name = "userName" type = "text" value = {userName} />
+                        <input id = "userName" name = "userName" type = "text" onChange = {onChange} value = {userName} />
                     </label>
                     <label>
                         <h3>Password: </h3>
-                        <input id = "password" name = "password" type = "text" value = {password} />
+                        <input id = "password" name = "password" type = "text" onChange = {onChange} value = {password} />
                     </label>
-                    <button id = "login-button">Submit</button>
+                    <Link to = {`event-display`}>
+                        <button id = "login-button">Submit</button>
+                    </Link>
                 </form>
             </InfoDiv>
         </LoginDiv>

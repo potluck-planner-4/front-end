@@ -1,13 +1,19 @@
 import React from 'react'
 import styled from 'styled-components'
+import { Link } from 'react-router-dom'
 
 const AccountCreation = (props) => {
 
-    const { userName, password } = props
+    const { userName, password, submit, change } = props
 
     const onSubmit = evt => {
         evt.preventDefault()
-        onSubmit()
+        submit()
+    }
+
+    const onChange = evt => {
+        const { userName , password } = evt.target
+        change( userName, password )
     }
     
     return(
@@ -19,15 +25,17 @@ const AccountCreation = (props) => {
                     <form id = "creation-form" onSubmit = {onSubmit}>
                         <label>
                             <h3>Username: </h3>
-                            <input id = "userName" name = "userName" type = "text" value = {userName} />
+                            <input id = "userName" name = "userName" type = "text" onChange = {onChange} value = {userName} />
                         </label>
                         <label>
                             <h3>Password: </h3>
-                            <input id = "password" name = "password" type = "text" value = {password} />
+                            <input id = "password" name = "password" type = "text" onChange = {onChange} value = {password} />
                         </label>
                         <br/>
                         <br/>
-                        <button id = "creation-button">Submit</button>
+                        <Link to = {`event-display`}>
+                            <button id = "creation-button">Submit</button>
+                        </Link>
                     </form>
                 </AccountBox>
             </MainDiv>
