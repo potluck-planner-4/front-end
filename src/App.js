@@ -7,6 +7,7 @@ import AccountCreation from './Components/AccountCreation'
 import Nav from './Components/Nav'
 import EventDisplay from './Components/EventDisplay'
 import EventSignUp from './Components/EventSignUp'
+import CreateEvent from './Components/CreateEvent'
 
 function App() {
 
@@ -30,6 +31,10 @@ function App() {
         <Route id = 'event-sign-up' path="/event-sign-up">
           <Nav />
           <EventSignUp />
+        </Route>
+        <Route id = 'create-event' path="/create-event">
+          <Nav />
+          <CreateEvent />
         </Route>
         <Route id = 'home' path="/">
           <Nav />
